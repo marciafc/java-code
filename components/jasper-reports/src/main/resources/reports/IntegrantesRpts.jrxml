@@ -7,6 +7,7 @@
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
+	<field name="nome" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -30,7 +31,16 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="27" y="20" width="413" height="30" uuid="5f270904-1e84-40a8-9cf8-fddce2890ab8"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-73" y="20" width="100" height="30" uuid="8b411a71-f357-4c50-be31-e607002ec4ee"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+		</band>
 	</detail>
 	<pageFooter>
 		<band height="61" splitType="Stretch">

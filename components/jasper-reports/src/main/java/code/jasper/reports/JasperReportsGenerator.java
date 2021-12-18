@@ -1,6 +1,7 @@
 package code.jasper.reports;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -10,6 +11,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.UUID;
+
 
 import code.jasper.reports.util.FileUtil;
 import code.jasper.reports.util.ReportFormat;
@@ -30,11 +33,17 @@ public class JasperReportsGenerator {
 	private File reportPath;
 	private String reportName;
 	private File destinationPath;
+	private String destinationFile;
 	
 	private Map<String, Object> parameters = new HashMap<>();
 	private Object data;
     
-	
+	public void setParameter(String name, Object value) {
+        this.parameters.put(name, value);
+    }
+	public void setData(Object data) {
+		this.data = data;
+	}
 	private File convertToFile(String ...paths) {
 		return FileUtil.file("/", paths);
 	}
@@ -48,7 +57,9 @@ public class JasperReportsGenerator {
 	public void setReportName(String reportName) {
 		this.reportName = reportName;
 	}
-
+	public void setDestinationFile(String destinationFile) {
+		this.destinationFile = destinationFile;
+	}
 	public void setResourceFolder(String ... paths) {
 		try {
 			reportPath = FileUtil.resource(paths);
@@ -67,9 +78,17 @@ public class JasperReportsGenerator {
 	public static JasperReportsGenerator of() {
 		JasperReportsGenerator generator = new JasperReportsGenerator();
 		generator.setResourceFolder("reports");
-		generator.setDestinationPath(System.getProperty("java.io.tmpdir"));
+		generator.destinationPath = new File( System.getProperty("java.io.tmpdir"));
+		generator.setDestinationFile(UUID.randomUUID().toString()+".pdf"); //ver classe code.jasper.reports.util.ReportFormat
 		return generator;
 	}
+	public File generateFile() throws IOException, JRException {
+        File file = new File(destinationPath, destinationFile);
+        try (OutputStream output = new FileOutputStream(file)) {
+            generate(output);
+        }
+        return file;
+    }
 	private void generate(OutputStream output) throws IOException, JRException {
 		try {
 			InputStream jasperStream = FileUtil.stream(reportPath, reportName);
@@ -106,7 +125,6 @@ public class JasperReportsGenerator {
         }
 
     }
-
 	private void generatePdf(JasperPrint jasperPrint, OutputStream output) throws JRException {
         JRPdfExporter pdfExporter = new JRPdfExporter();
         pdfExporter.setExporterInput(new SimpleExporterInput(jasperPrint));

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.13.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IntegrantesRpts" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47cff52f-9eef-47ee-be4b-fa05ed03557a">
+	<parameter name="NOME_FANTASIA" class="java.lang.String"/>
+	<parameter name="EMAIL" class="java.lang.String"/>
+	<parameter name="TELEFONE" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="96" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="327" height="30" uuid="f38c206b-f38a-43ad-ba46-7e6e04c15adb"/>
+				<textFieldExpression><![CDATA[$P{NOME_FANTASIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="327" height="30" uuid="5c9eb456-6e66-4208-94d5-f5fb43e10dad"/>
+				<textFieldExpression><![CDATA[$P{EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="327" height="30" uuid="f3966f8b-0cb4-4d06-81e5-6700023d0f12"/>
+				<textFieldExpression><![CDATA[$P{TELEFONE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="31" width="550" height="30" uuid="09f75647-90bf-420d-9b35-d88c28dd0ad5"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Digytal Code :  Programação, Pesquisa, Educação]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

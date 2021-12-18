@@ -11,11 +11,13 @@ public class Sample {
 		generatorReport.setParameter("EMAIL", "gleyson@digytal.com.br");
 		generatorReport.setParameter("TELEFONE", "(11) 95894-0362");
 		
-		Integrante gleyson = new Integrante();
-		gleyson.setNome("GLEYSON SAMPAIO");
 		
 		List<Integrante> integrantes = new ArrayList<>();
-		integrantes.add(gleyson);
+		integrantes.add(new Integrante("GLEYSON SAMPAIO","glysns","glysns"));
+		integrantes.add(new Integrante("FRANK MARLON","frankmms","frankmms"));
+		integrantes.add(new Integrante("RAIMUNDO LOUREIRO","rsoft","rrsoft"));
+		integrantes.add(new Integrante("ALOISIO CARVALHO","aloisiogit","aloisio_linkedin"));
+	
 		try {
 			generatorReport.setData(integrantes);
 			generatorReport.generateFile();

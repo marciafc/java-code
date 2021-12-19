@@ -1,9 +1,11 @@
-package code.send.email;
+package code.send.email.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
+
+import code.send.email.model.Mensagem;
 
 @Component
 public class EmailService {

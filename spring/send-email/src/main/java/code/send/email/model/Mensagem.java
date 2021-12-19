@@ -1,4 +1,4 @@
-package code.send.email;
+package code.send.email.model;
 
 public class Mensagem {
 	private String tema;

@@ -8,6 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import code.send.email.model.Mensagem;
+import code.send.email.service.EmailService;
+import code.send.email.util.FileReaderUtil;
+
 @SpringBootApplication
 public class SendEmailApplication {
 
@@ -19,7 +23,7 @@ public class SendEmailApplication {
 	public CommandLineRunner run(EmailService sendEmail) throws Exception {
 		return args -> {
 			//local de um arquivo csv
-			File file = new File("/digytal/emails.csv");
+			File file = FileReaderUtil.resource("emails.csv");
 			List<String> linhas = FileReaderUtil.list(file.getAbsolutePath());
 			linhas.forEach(linha->{
 				String[] colunas = linha.split(";");

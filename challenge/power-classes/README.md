@@ -31,15 +31,14 @@ O nosso desafio é explorar as principais classes da linguagem Java.
 - java.time.LocalDateTime
 
 ##### Grupo 04
-- java.util.Formatter
-- java.time.format.DateTimeFormatter
-- java.text.DecimalFormat
+- java.io.File
+- java.nio.file.Path
+- java.nio.file.Paths
 
 ##### Grupo 05
 - java.util.Formatter
 - java.time.format.DateTimeFormatter
 - java.text.DecimalFormat
-
 
 
 #### Dicas

@@ -17,7 +17,7 @@ Projeto com a finalidade de enviar e-mails utilizando Java Spring Boot
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
 - Service: onde definimos as regras de negócio para manipulação dos Models
-- Util: onde classes utilitárias
+- Util: Contém classes utilitárias
 
 ### Classes Utilitárias
 

@@ -53,6 +53,7 @@ Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/
 Altere o arquivo `resources/emails.csv` e execute a classe `SendEmailApplication`
 
 
+![](https://github.com/digytal-code/java-code/blob/main/spring/send-email/src/main/resources/teste.jpg)
 
 
 ###### #java #spring #gmail #email

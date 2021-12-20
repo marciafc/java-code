@@ -21,5 +21,9 @@ O nosso desafio é explorar as principais classes da linguagem Java.
 - java.lang.StringBuilder
 - java.util.Formatter
 
+#### Dicas
+- Use a documentação oficial da Oracle + outras referências e exemplos na internet
+- Atuar em conjunto para resolver o item 1 de requisitos e depois tentar distribuir entre os integrantes do grupo
+- Testes, testes e mais testes, pensem previamente no resultado e validem no console
 
 

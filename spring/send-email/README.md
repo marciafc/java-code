@@ -26,6 +26,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 | code.send.email.model.Mensagem  | Classe que representa uma Mensagem gerada no sistema
 | code.send.email.service.SendEmailService  | Classe que recebe a mensagem como parametro e enviar o e-mail através de um serviço SMTP como Gmail
 | code.send.email.util.FileReaderUtil  | Classe utilitária para leitura de arquivos caso necessite enviar e-mail em lotes
+| code.send.email.SendEmailApplication  | Classe principal padrão Springboot contendo um `bean` de CommandLineRunner.
 
 ### Configuração do serviços de E-mail
 
@@ -46,6 +47,17 @@ spring.mail.test-connection=true
 O Spring usa expressões ternária para validar as variáveis de ambiente da aplicação.
 
 Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/a/answer/6260879?hl=pt-BR) para desativar algumas configurações de segurança.
+
+### Teste
+
+Altere o arquivo `resources/emails.csv` e execute a classe `SendEmailApplication`
+
+
+
+
+###### #java #spring #gmail #email
+
+
 
 
 

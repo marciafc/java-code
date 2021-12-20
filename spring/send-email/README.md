@@ -4,7 +4,7 @@
 [(11) 95894-0362](https://api.whatsapp.com/send?phone=5511958940362)
 
 
-#### Autores
+#### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Requisito

@@ -42,6 +42,8 @@ spring.mail.test-connection=true
 
 O Spring usa expressões ternária para validar as variáveis de ambiente da aplicação.
 
+Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/a/answer/6260879?hl=pt-BR) para desativar algumas configurações de segurança.
+
 
 
 

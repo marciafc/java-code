@@ -7,5 +7,5 @@
 #### Autores
 - [Gleyson Sampaio](https://github.com/glysns)
 
-### Spring Send Email
+## Spring Send Email
 Projeto com a finalidade de enviar e-mails utilizando Java Spring Boot

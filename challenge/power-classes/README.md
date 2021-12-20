@@ -31,20 +31,20 @@ O nosso desafio é explorar as principais classes da linguagem Java.
 - java.time.LocalDateTime
 
 ##### Grupo 04
-- java.io.File
-- java.nio.file.Path
-- java.nio.file.Paths
-
-##### Grupo 05
 - java.util.Formatter
 - java.time.format.DateTimeFormatter
 - java.text.DecimalFormat
+
+##### Grupo 05
+- java.io.File
+- java.nio.file.Path
+- java.nio.file.Paths
 
 
 #### Dicas
 - Use a documentação oficial da Oracle + outras referências e exemplos na internet
 - Atuar em conjunto para resolver o item 1 de requisitos e depois tentar distribuir entre os integrantes do grupo
 - Testes, testes e mais testes, pensem previamente no resultado e validem no console
-- O Grupo que receber o requisito do Grupo 05, poderá/deverá interagir com os demais grupos
+- O Grupo 04 poderá/deverá interagir com os demais grupos
 
 

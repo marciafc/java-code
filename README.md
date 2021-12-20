@@ -11,7 +11,8 @@ Repositório repleto de desafios, componentes, fundamentos da linguagem e demons
 | Nome  | Descrição |
 | ------------- | ------------- |
 | [challenge](https://github.com/digytal-code/java-code/tree/main/challenge)  | Desafios e projetos para que você possa praticar e dominar os conceitos da linguagem.
-| [components](https://github.com/digytal-code/java-code/tree/main/components)  | Implementações facilitadoras para você usar em seus projetos pessoais ou corporativos
-| [core](https://github.com/digytal-code/java-code/tree/main/core)  | Apresentação dos conceitos e fundamentos da linguagem considerando as novidades de cada versão
+| [components](https://github.com/digytal-code/java-code/tree/main/components)  | Implementações facilitadoras para você usar em seus projetos pessoais ou corporativos.
+| [core](https://github.com/digytal-code/java-code/tree/main/core)  | Apresentação dos conceitos e fundamentos da linguagem considerando as novidades de cada versão.
+| [persistence](https://github.com/digytal-code/java-code/tree/main/persistence)  | Abordagem das 03 formas de persistência na linguagem.
 
 

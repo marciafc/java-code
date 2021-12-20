@@ -8,7 +8,7 @@
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Requisito
-Precisa enviar e-mail da sua aplicação Java ?
+Precisa enviar e-mail da sua aplicação Spring ?
 
 ## Spring Send Email
 Projeto com a finalidade de enviar e-mails utilizando Java Spring Boot

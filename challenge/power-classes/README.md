@@ -19,7 +19,23 @@ O nosso desafio é explorar as principais classes da linguagem Java.
 - java.lang.String
 - java.util.StringJoiner
 - java.lang.StringBuilder
+
+##### Grupo 02
+- Descrição do que são classes Wrappers
+- java.lang.Integer
+- java.lang.Double
+
+##### Grupo 03
+- java.util.Calendar
+- java.time.LocalDate
+- java.time.LocalDateTime
+
+##### Grupo 04
 - java.util.Formatter
+- java.time.format.DateTimeFormatter
+- java.text.DecimalFormat
+
+
 
 #### Dicas
 - Use a documentação oficial da Oracle + outras referências e exemplos na internet

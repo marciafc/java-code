@@ -3,7 +3,10 @@ package code.jasper.reports;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sample {
+import code.jasper.reports.component.JasperReportsGenerator;
+import code.jasper.reports.model.Integrante;
+
+public class SampleReportGenerator {
 	public static void main(String[] args) {
 		JasperReportsGenerator generatorReport = JasperReportsGenerator.of();
 		generatorReport.setReportName("IntegrantesRpts.jasper");

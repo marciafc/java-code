@@ -1,4 +1,4 @@
-package code.jasper.reports;
+package code.jasper.reports.model;
 
 public class Integrante {
 	private String nome;

@@ -1,4 +1,4 @@
-package code.jasper.reports;
+package code.jasper.reports.component;
 
 import java.io.File;
 import java.io.FileOutputStream;

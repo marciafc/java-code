@@ -20,7 +20,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 | Classe  | Descrição |
 | ------------- | ------------- |
-| controle.acesso.infra.doc.SwaggerConfig  | Classe responsável pela documentação da API  |
-| controle.acesso.infra.security.jwt.JWTObject  | Classe que representa um Objeto correspondente a estrutura JWT  |
-| controle.acesso.infra.security.jwt.JWTCreator  | Classe responsável por gerar o Token com base no Objeto e ou instanciar o Objeto JWT com base no Token   |
+| code.send.email.model.Mensagem  | Classe que representa uma Mensagem gerada no sistema
+| code.send.email.service.SendEmailService  | Classe que recebe a mensagem como parametro e enviar o e-mail através de um serviço SMTP como Gmail
+| code.send.email.util.FileReaderUtil  | Classe utilitária para leitura de arquivos caso necessite enviar e-mail em lotes
 

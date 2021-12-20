@@ -3,15 +3,12 @@
 #### Autores
 - [Gleyson Sampaio](https://github.com/glysns)
 
-## Desafios
-A Digytal Code desenvolveu uma lista de desafios sobre temas da linguagem para que você possa comprovar de domina novas habilidades em programação.
+## Power Classes
+O nosso desafio é explorar as principais classes da linguagem Java.
 
-| Desafio  | Descrição |
-| ------------- | ------------- |
-| [Power Classes](https://github.com/digytal-code/java-code/tree/main/challenge/power-classes)  | Vamos conhecer e explorar as classes mais poderosas da linguagem Java.
-
-
-## Projetos
-Lista de desafios em forma de projetos para desenvolver ao longo da School
-| Desafio  | Descrição |
-| ------------- | ------------- |
+#### Requisitos
+1. Realizar uma breve descrição da classe em questão;
+1. Apresentar alternativas de instanciação de objetos com contrutor ou metódos singletons;
+1. Apresentar no mínimo 04 métodos mais utilizados destacando o seu contrato (tipo retorno + nome + parâmetros);
+1. Apresentar se alguns dos métodos é sobrecarregado;
+1. Realizar uma demonstração adaptando o uso dos métodos em situações do cotidiando (use a imaginação); 

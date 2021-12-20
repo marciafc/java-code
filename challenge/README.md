@@ -11,7 +11,7 @@ A Digytal Code desenvolveu uma lista de desafios sobre temas da linguagem para q
 
 | Desafio  | Descrição |
 | ------------- | ------------- |
-| [Power Classes](https://github.com/educacao-gama/desafios-gama/tree/main/bankline)  | Vamos conhecer e explorar as classes mais poderosas da linguagem Java.
+| [Power Classes](https://github.com/digytal-code/java-code/tree/main/challenge/power-classes)  | Vamos conhecer e explorar as classes mais poderosas da linguagem Java.
 
 
 ## Projetos

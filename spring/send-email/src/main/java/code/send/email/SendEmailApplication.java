@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import code.send.email.model.Mensagem;
-import code.send.email.service.EmailService;
+import code.send.email.service.SendEmailService;
 import code.send.email.util.FileReaderUtil;
 
 @SpringBootApplication
@@ -20,7 +20,7 @@ public class SendEmailApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner run(EmailService sendEmail) throws Exception {
+	public CommandLineRunner run(SendEmailService sendEmail) throws Exception {
 		return args -> {
 			//local de um arquivo csv
 			File file = FileReaderUtil.resource("emails.csv");

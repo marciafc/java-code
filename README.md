@@ -1,7 +1,7 @@
 # Digytal Code - Programação, Pesquisa, Educação
-[www.digytal.com.br](https://www.digytal.com.br) 
+[www.digytal.com.br](http://www.digytal.com.br) 
 
-[(11) 95894-0362](https://www.digytal.com.br)
+[(11) 95894-0362](http://www.digytal.com.br)
 
 
 #### Autores

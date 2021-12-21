@@ -11,7 +11,6 @@
 - Noções de uso/compilação na ferramenta Jasper Reports
 - Ter um arquivo .jasper
 
-
 #### Finalidade
 - Gerar relatórios no formato pdf em disco
 
@@ -40,7 +39,29 @@ Dentro da pasta `src/resources` temos uma pasta chamada `reports` contendo dois 
 1. IntegrantesRpts.jrxml  : Arquivo com modelo de edição de um relatório com Jasper.
 2. IntegrantesRpts.jasper : Arquivo compilado para geração de arquivos .pdf pela classe `JasperReportsGenerator`
 
+Execute a classe `code.jasper.reports.SampleReportGenerator`
 
+```
+JasperReportsGenerator generatorReport = JasperReportsGenerator.of(); //criando uma instancia do gerador
+generatorReport.setReportName("IntegrantesRpts.jasper"); //definindo o arquivo, por padrão ele buscará em src/resource/reports
+generatorReport.setParameter("NOME_FANTASIA", "Digytal Code"); //exemplo de passagem de parametros
+generatorReport.setParameter("EMAIL", "gleyson@digytal.com.br");
+generatorReport.setParameter("TELEFONE", "(11) 95894-0362");
+
+
+List<Integrante> integrantes = new ArrayList<>(); // crindo uma lista que representa dados do banco de dados
+integrantes.add(new Integrante("GLEYSON SAMPAIO","glysns","glysns"));
+integrantes.add(new Integrante("FRANK MARLON","frankmms","frankmms"));
+integrantes.add(new Integrante("RAIMUNDO LOUREIRO","rsoft","rrsoft"));
+integrantes.add(new Integrante("ALOISIO CARVALHO","aloisiogit","aloisio_linkedin"));
+
+try {
+  generatorReport.setData(integrantes); //passando os dados para o relatório, pode ser List, ResultSet
+  generatorReport.generateFile(); // método para geração do arquivo
+} catch (Exception e) {
+  e.printStackTrace();
+}
+```
 
 
 ###### #java #jasper_reports #relatorio

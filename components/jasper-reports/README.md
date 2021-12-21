@@ -7,11 +7,16 @@
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
-#### Requisito
-Precisa enviar e-mail da sua aplicação Spring ?
+#### Requisitos
+- Noções de uso/compilação na ferramenta Jasper Reports
+- Ter um arquivo .jasper
 
-## Spring Send Email
-Projeto com a finalidade de enviar e-mails utilizando Java Spring Boot
+
+#### Finalidade
+- Gerar relatórios no formato pdf em disco
+
+## Jasper Reports Generator
+Projeto com a finalidade de facilitar a geração de arquivos .pdf com base em relatórios confeccionados pela ferramenta Jasper Reports
 
 ### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.

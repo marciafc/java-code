@@ -49,7 +49,7 @@ generatorReport.setParameter("EMAIL", "gleyson@digytal.com.br");
 generatorReport.setParameter("TELEFONE", "(11) 95894-0362");
 
 
-List<Integrante> integrantes = new ArrayList<>(); // crindo uma lista que representa dados do banco de dados
+List<Integrante> integrantes = new ArrayList<>(); // criando uma lista que representa dados do banco de dados
 integrantes.add(new Integrante("GLEYSON SAMPAIO","glysns","glysns"));
 integrantes.add(new Integrante("FRANK MARLON","frankmms","frankmms"));
 integrantes.add(new Integrante("RAIMUNDO LOUREIRO","rsoft","rrsoft"));

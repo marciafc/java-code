@@ -36,12 +36,14 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 ### Teste
 
-Altere o arquivo `resources/emails.csv` e execute a classe `SendEmailApplication`
+Dentro da pasta `src/resources` temos uma pasta chamada `reports` contendo dois arquivos.
+1. IntegrantesRpts.jrxml  : Arquivo com modelo de edição de um relatório com Jasper.
+2. IntegrantesRpts.jasper : Arquivo compilado para geração de arquivos .pdf pela classe `JasperReportsGenerator`
 
 
 
 
-###### #java #spring #gmail #email
+###### #java #jasper_reports #relatorio
 
 
 

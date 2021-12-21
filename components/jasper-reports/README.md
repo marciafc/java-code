@@ -21,8 +21,8 @@ Projeto com a finalidade de facilitar a geração de arquivos .pdf com base em r
 ### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Service: onde definimos as regras de negócio para manipulação dos Models
-- Util: onde classes utilitárias
+- Component: pacote que contém o componente de geração de relatórios
+- Util: pacote para organizar as classes utilitárias
 
 ### Classes Utilitárias
 

@@ -7,55 +7,64 @@
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
-#### Requisito
-Precisa enviar e-mail da sua aplicação Spring ?
+#### Requisitos
+- Noções de uso/compilação na ferramenta Jasper Reports
+- Ter um arquivo .jasper
 
-## Spring Send Email
-Projeto com a finalidade de enviar e-mails utilizando Java Spring Boot
+#### Finalidade
+- Gerar relatórios no formato pdf em disco
+
+## Jasper Reports Generator
+Projeto com a finalidade de facilitar a geração de arquivos .pdf com base em relatórios confeccionados pela ferramenta Jasper Reports
 
 ### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Service: onde definimos as regras de negócio para manipulação dos Models
-- Util: onde classes utilitárias
+- Component: pacote que contém o componente de geração de relatórios
+- Util: pacote para organizar as classes utilitárias
 
 ### Classes Utilitárias
 
 | Classe  | Descrição |
 | ------------- | ------------- |
-| code.send.email.model.Mensagem  | Classe que representa uma Mensagem gerada no sistema
-| code.send.email.service.SendEmailService  | Classe que recebe a mensagem como parametro e enviar o e-mail através de um serviço SMTP como Gmail
-| code.send.email.util.FileReaderUtil  | Classe utilitária para leitura de arquivos caso necessite enviar e-mail em lotes
-| code.send.email.SendEmailApplication  | Classe principal padrão Springboot contendo um `bean` de CommandLineRunner.
+| code.jasper.reports.component.JasperReportsGenerator  | Classe responsável pela engine de geração de documentos .pdf
+| code.jasper.reports.model.Integrante  | Classe que representa uma estrutura de dados para ser impressa como uma lista detalhe no relatório
+| code.jasper.reports.util.FileUtil  | Classe auxiliar para disponibilizar recursos relacionados a diretórios e arquivos para geração dos .pdfs
+| code.jasper.reports.util.ReportFormat  | Enum auxiliar caso queira atuar com outro formato de relatório
 
-### Configuração do serviços de E-mail
-
-Toda configuração de credencial para acesso a algum serviço de envio de e-mail fica localizado no arquivo `application.propertis` conforme conteúdo abaixo:
-
-```
-spring.mail.host=${MAIL_HOST:smtp.gmail.com}
-spring.mail.port=${MAIL_PORT:587}
-spring.mail.username=${MAIL_USERNAME:seuemail@gmail.com.br}
-spring.mail.password=${EMAIL_PASS:nopass}
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-spring.mail.properties.mail.smtp.starttls.required=true
-spring.mail.properties.mail.smtp.ssl.enable=false
-spring.mail.test-connection=true
-```
-
-O Spring usa expressões ternária para validar as variáveis de ambiente da aplicação.
-
-Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/a/answer/6260879?hl=pt-BR) para desativar algumas configurações de segurança.
 
 ### Teste
 
-Altere o arquivo `resources/emails.csv` e execute a classe `SendEmailApplication`
+Dentro da pasta `src/resources` temos uma pasta chamada `reports` contendo dois arquivos.
+1. IntegrantesRpts.jrxml  : Arquivo com modelo de edição de um relatório com Jasper.
+2. IntegrantesRpts.jasper : Arquivo compilado para geração de arquivos .pdf pela classe `JasperReportsGenerator`
+
+Execute a classe `code.jasper.reports.SampleReportGenerator`
+
+```
+JasperReportsGenerator generatorReport = JasperReportsGenerator.of(); //criando uma instancia do gerador
+generatorReport.setReportName("IntegrantesRpts.jasper"); //definindo o arquivo, por padrão ele buscará em src/resource/reports
+generatorReport.setParameter("NOME_FANTASIA", "Digytal Code"); //exemplo de passagem de parametros
+generatorReport.setParameter("EMAIL", "gleyson@digytal.com.br");
+generatorReport.setParameter("TELEFONE", "(11) 95894-0362");
 
 
+List<Integrante> integrantes = new ArrayList<>(); // criando uma lista que representa dados do banco de dados
+integrantes.add(new Integrante("GLEYSON SAMPAIO","glysns","glysns"));
+integrantes.add(new Integrante("FRANK MARLON","frankmms","frankmms"));
+integrantes.add(new Integrante("RAIMUNDO LOUREIRO","rsoft","rrsoft"));
+integrantes.add(new Integrante("ALOISIO CARVALHO","aloisiogit","aloisio_linkedin"));
+
+try {
+  generatorReport.setData(integrantes); //passando os dados para o relatório, pode ser List, ResultSet
+  generatorReport.generateFile(); // método para geração do arquivo
+} catch (Exception e) {
+  e.printStackTrace();
+}
+```
 
 
-###### #java #spring #gmail #email
+###### #java #jasper_reports #relatorio
 
 
 

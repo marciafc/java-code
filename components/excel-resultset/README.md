@@ -19,7 +19,7 @@ Projeto com a finalidade de facilitar a leitura de arquivos Excel baseado no pad
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: Classes que represetam o modelo da aplicação na qual é necessário criar através da leitura do arquivo
-- Util: pacote que contém a classe `digytal.java.util.ExcelResultSet` com toda lógica de leitura de arquivo.
+- Component: pacote que contém a classe `code.excel.resultset.component.ExcelResultSet` com toda lógica de leitura de arquivo.
 
 ##### No pom.xml inclua a dependência
 
@@ -28,7 +28,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 <dependency>
 	<groupId>org.apache.poi</groupId>
 	<artifactId>poi-ooxml</artifactId>
-	<version>3.15</version>
+	<version>4.1.2</version>
 </dependency>
 ```
 > ** ExcelResultSet: Definição de uma classe Utilitária que lê registros através de uma planilha Excel com base na estrutura JDBC ResultSet**
@@ -36,33 +36,33 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 #### Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringExcelResultSetApplication`: A aplicação será iniciada.
+1. Execute a classe `code.excel.resultset.sample.ExcelResultSetSample`: A aplicação será iniciada.
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-poi-excel-resultset/src/main/resources/exrs-poi-sample.png)
 
 ##### Semelhante o ResultSet do JDBC podemos ler colunas do Excel pela Label (Cabeçalho) e já converter para os tipos específicos.
 ```
-	ClassPathResource resourceFile = new ClassPathResource("transformadores.xlsx");
-	File file =  resourceFile.getFile();
+//MUDE PARA O ARQUIVO REAL
+File file = new File(Thread.currentThread().getContextClassLoader().getResource("instrutor.xlsx").toURI());
+			
+ExcelResultSet exRs = new ExcelResultSet(file);
 
-	ExcelResultSet exRs = new ExcelResultSet(file);
+while(exRs.next()) {
+	String cpf = exRs.getString("Cpf");
+	String nome = exRs.getString("Nome");
+	LocalDate dtNascimento = exRs.getLocalDate("Data Nascimento");
+	Sexo sexo = Sexo.valueOf(exRs.getString("Sexo").toUpperCase());
+	Double valorHora = exRs.getDouble("Valor Hora");
+	Boolean brasileiro = exRs.getBoolean("Brasileiro?", "S");
 
-	while(exRs.next()) {
-		String cpf = exRs.getString("Cpf");
-		String nome = exRs.getString("Nome");
-		LocalDate dtNascimento = exRs.getLocalDate("Data Nascimento");
-		Sexo sexo = Sexo.valueOf(exRs.getString("Sexo").toUpperCase());
-		Double valorHora = exRs.getDouble("Valor Hora");
-		Boolean brasileiro = exRs.getBoolean("Brasileiro?", "S");
-
-		System.out.println(String.format("O professor %s de Cpf %s, nascido em %s, no País %s do Sexo %s, com valor hora R$ %.2f ",
-				nome,
-				cpf,
-				dtNascimento.toString(),
-				brasileiro?"BRASIL":"EXTERIOR",
-				sexo.getDescricao(),
-				valorHora
-				));		
+	System.out.println(String.format("O professor %s de Cpf %s, nascido em %s, no País %s do Sexo %s, com valor hora R$ %.2f ",
+			nome,
+			cpf,
+			dtNascimento.toString(),
+			brasileiro?"BRASIL":"EXTERIOR",
+			sexo.getDescricao(),
+			valorHora
+			));		
 ```
 
 * Deverá retornar no console algo do tipo:
@@ -73,3 +73,4 @@ O professor RAIMUNDO NONATO de Cpf 95148766852, nascido em 1981-07-10, no País 
 O professor FABIANA MACHADO de Cpf 44896544798, nascido em 1989-10-12, no País BRASIL do Sexo Feminino, com valor hora R$ 90,00 
 ```
 
+###### #java #excel #apache_poi

@@ -1,15 +1,20 @@
-# Digytal - Treinamento, Consultoria e Fábrica de Software
-www.digytal.com.br
-(11) 95894 0362
+ Digytal Code - Programação, Pesquisa e Educação
+[www.digytal.com.br](http://www.digytal.com.br) 
 
-## Springboot - Apache POI
+[(11) 95894-0362](https://api.whatsapp.com/send?phone=5511958940362)
 
-Projeto Spring para demonstração do uso de Springboot o Apache POI.
-
-**NOTA: NÃO é necessário o projeto ser Springboot para uso do Apache POI **
 
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
+
+#### Requisitos
+- Noções de biblioteca Apache POI
+
+#### Finalidade
+- Leitura facilitada de arquivos Excel com base no padrão JDBC
+- 
+## Excel ResultSet
+Projeto com a finalidade de facilitar a leitura de arquivos Excel baseado no padrão JDBC
 
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.

@@ -17,6 +17,6 @@ O nosso desafio é consolidar o que foi apresentado sobre o domínio das classes
 
 #### Layout de output
 
-[](https://github.com/digytal-code/java-code/blob/main/challenge/power-classes-project/ficha_profissional.jpg)
+![](https://github.com/digytal-code/java-code/blob/main/challenge/power-classes-project/ficha_profissional.jpg)
 
 

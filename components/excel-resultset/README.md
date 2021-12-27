@@ -38,7 +38,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 1. Execute a classe `code.excel.resultset.sample.ExcelResultSetSample`: A aplicação será iniciada.
 
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-poi-excel-resultset/src/main/resources/exrs-poi-sample.png)
+![](https://github.com/digytal-code/java-code/blob/main/components/excel-resultset/src/main/resources/exrs-poi-sample.png)
 
 ##### Semelhante o ResultSet do JDBC podemos ler colunas do Excel pela Label (Cabeçalho) e já converter para os tipos específicos.
 ```

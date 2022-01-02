@@ -36,23 +36,30 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 Configuramos no `application.properties` um mapa de entidades e id que representam as nossas tabelas no database para quando alterar um cliente salvar o id=2 por exemplo
 
-```
+```xml
 entitys={cidade: '1', cliente: '2'}
 ```
 
 Temos a classe entidade `LogDatabase` que representa a tabela de log de alteração de dados no banco de dados.
 
-**Toda classe que implementar `code.jpa.audit.infra.Auditable` será interceptada para gerar um log de alteração.
+** Toda classe que implementar `code.jpa.audit.infra.Auditable` será interceptada para gerar um log de alteração. **
 
 #### Javers
 
-Javers é um framework de que utiliza de Java Reflection para para comparar dois objetos e criar uma lista das alterações Changes.
-
-Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/a/answer/6260879?hl=pt-BR) para desativar algumas configurações de segurança.
+[Javers](https://javers.org/documentation/getting-started/) é um framework de que utiliza de Java Reflection para para comparar dois objetos e criar uma lista das alterações Changes.
 
 #### Spring Data Hibernate Event
 
-Biblioteca da comunidade Github para simplificar a configuração de listeners de transação de persistência JPA
+[Biblioteca](https://github.com/teastman/spring-data-hibernate-event) da comunidade Github para simplificar a configuração de listeners de transação de persistência JPA
+
+```xml
+<dependency>
+  <groupId>io.github.teastman</groupId>
+  <artifactId>spring-data-hibernate-event</artifactId>
+  <version>1.0.1</version>
+</dependency>
+```
+
 
 ### Teste
 

@@ -1,5 +1,6 @@
 package code.jpa.audit.infra;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
@@ -33,16 +34,14 @@ public class AuditListener {
 	@Autowired
 	private LogDatabaseRepository logRepository;
 
-	@PersistenceContext
-	private EntityManager entityManager;
-
 	@HibernateEventListener
 	public void onSave(Object entity, PreInsertEvent event) {
 		System.out.println("Insert:" + entity);
 	}
-	@Autowired
-	private Entities entities;
 	
+	@Value("#{${entitys}}")
+	private final Map<String, String> entitys = new HashMap<>();
+
 	@HibernateEventListener
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
 	public void onUpdate(Object entity, PreUpdateEvent event) {
@@ -85,7 +84,7 @@ public class AuditListener {
 			log.setValorAtual(vc.getRight().toString());
 			// demais campos de dominio
 			log.setRegistroId(older.getId().toString());
-			log.setTabelaId(entities.getEntidades().get(older.getClass().getSimpleName().toLowerCase()));
+			log.setTabelaId(entitys.get(older.getClass().getSimpleName().toLowerCase()));
 			logRepository.save(log);
 		}
 	}

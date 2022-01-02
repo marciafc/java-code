@@ -62,7 +62,7 @@ public class Processamento {
 	public void alteraCliente() throws Exception {
 		System.out.println("----------ALTERANDO CLIENTE----------");
 		
-		Cliente dbEntity = cliRepository.findByCpf("456"); 
+		Cliente dbEntity = cliRepository.findByCpf("123"); 
 		if(dbEntity!=null) {
 			Cliente cli = new Cliente();
 			Endereco end = new Endereco();
@@ -73,7 +73,7 @@ public class Processamento {
 			cli.setEndereo(end);
 			cli.getEndereo().setLogradouro("RUA JOSE FIRMINO");
 			cli.setId(dbEntity.getId());
-			cli.setNome("MARCOS PAULO");
+			cli.setNome("GLEYSON SAMPAIO DE OLIVEIRA");
 			cli.setCpf(dbEntity.getCpf());
 			cli.setCidade(dbEntity.getCidade());
 			

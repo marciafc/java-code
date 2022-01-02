@@ -42,7 +42,7 @@ entitys={cidade: '1', cliente: '2'}
 
 Temos a classe entidade `LogDatabase` que representa a tabela de log de alteração de dados no banco de dados.
 
-** Toda classe que implementar `code.jpa.audit.infra.Auditable` será interceptada para gerar um log de alteração. **
+**Toda classe que implementar `code.jpa.audit.infra.Auditable` será interceptada para gerar um log de alteração.**
 
 #### Javers
 
@@ -66,7 +66,7 @@ Temos a classe entidade `LogDatabase` que representa a tabela de log de alteraç
 execute a classe `code.jpa.audit.SpringJpaAuditApplication` na base dados de sua preferência e analise a tabela `tb_log_database`
 
 
-![](https://github.com/digytal-code/java-code/blob/main/spring/send-email/src/main/resources/teste.jpg)
+![](https://github.com/digytal-code/java-code/blob/main/spring/spring-jpa-audit/src/main/resources/LOG.jpg)
 
 
 ###### #java #spring #jpa #audit

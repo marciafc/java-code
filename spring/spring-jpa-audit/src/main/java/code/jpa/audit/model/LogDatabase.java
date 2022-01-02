@@ -7,8 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "tb_log_database")
 public class LogDatabase {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

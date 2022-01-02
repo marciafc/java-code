@@ -30,37 +30,39 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 | code.jpa.audit.infra.Auditable  | Interface que representa uma entidade auditável
 | code.jpa.audit.infra.AuditConfig  | Classe de configuração para o listener de autditoria de persistência
 | code.jpa.audit.infra.AuditListener  | Classe que contém a lógica de autditoria
-| code.send.email.SendEmailApplication  | Classe principal padrão Springboot contendo um `bean` de CommandLineRunner.
+| code.jpa.audit.start.Processamento  | Classe que contém exemplo de persistência de uma classe Cidade e Cliente executada peplo Springboot contendo um `bean` de CommandLineRunner.
 
-### Configuração do serviços de E-mail
+### Configuração
 
-Toda configuração de credencial para acesso a algum serviço de envio de e-mail fica localizado no arquivo `application.propertis` conforme conteúdo abaixo:
+Configuramos no `application.properties` um mapa de entidades e id que representam as nossas tabelas no database para quando alterar um cliente salvar o id=2 por exemplo
 
 ```
-spring.mail.host=${MAIL_HOST:smtp.gmail.com}
-spring.mail.port=${MAIL_PORT:587}
-spring.mail.username=${MAIL_USERNAME:seuemail@gmail.com.br}
-spring.mail.password=${EMAIL_PASS:nopass}
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-spring.mail.properties.mail.smtp.starttls.required=true
-spring.mail.properties.mail.smtp.ssl.enable=false
-spring.mail.test-connection=true
+entitys={cidade: '1', cliente: '2'}
 ```
 
-O Spring usa expressões ternária para validar as variáveis de ambiente da aplicação.
+Temos a classe entidade `LogDatabase` que representa a tabela de log de alteração de dados no banco de dados.
+
+**Toda classe que implementar `code.jpa.audit.infra.Auditable` será interceptada para gerar um log de alteração.
+
+#### Javers
+
+Javers é um framework de que utiliza de Java Reflection para para comparar dois objetos e criar uma lista das alterações Changes.
 
 Serviço de envio de e-mail do Google, [clique aqui](https://support.google.com/a/answer/6260879?hl=pt-BR) para desativar algumas configurações de segurança.
 
+#### Spring Data Hibernate Event
+
+Biblioteca da comunidade Github para simplificar a configuração de listeners de transação de persistência JPA
+
 ### Teste
 
-Altere o arquivo `resources/emails.csv` e execute a classe `SendEmailApplication`
+execute a classe `code.jpa.audit.SpringJpaAuditApplication` na base dados de sua preferência e analise a tabela `tb_log_database`
 
 
 ![](https://github.com/digytal-code/java-code/blob/main/spring/send-email/src/main/resources/teste.jpg)
 
 
-###### #java #spring #gmail #email
+###### #java #spring #jpa #audit
 
 
 

@@ -1,20 +1,11 @@
 package code.jpa.audit.start;
 
-import java.util.Date;
-
-import org.javers.core.Changes;
-import org.javers.core.Javers;
-import org.javers.core.JaversBuilder;
-import org.javers.core.diff.Change;
-import org.javers.core.diff.Diff;
-import org.javers.core.diff.changetype.ValueChange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import code.jpa.audit.model.Cidade;
 import code.jpa.audit.model.Cliente;
 import code.jpa.audit.model.Endereco;
-import code.jpa.audit.model.LogDatabase;
 import code.jpa.audit.repository.CidadeRepository;
 import code.jpa.audit.repository.ClienteRepository;
 

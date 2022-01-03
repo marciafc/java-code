@@ -68,6 +68,9 @@ execute a classe `code.jpa.audit.SpringJpaAuditApplication` na base dados de sua
 
 ![](https://github.com/digytal-code/java-code/blob/main/spring/spring-jpa-audit/src/main/resources/LOG.jpg)
 
+Para visualizar h2 no navegador [http://localhost:8080/h2](http://localhost:8080/h2)
+
+[Como utilizar o Banco de Dados h2 com Spring Boot](https://receitasdecodigo.com.br/spring-boot/como-utilizar-o-banco-de-dados-h2-com-spring-boot)
 
 ###### #java #spring #jpa #audit
 
